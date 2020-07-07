@@ -107,8 +107,6 @@ const update = async (city: string): Promise<OverlayProps> => {
   );
   const json = await response.json();
 
-  console.log(json);
-
   const start: Date = new Date(json.sunrise.value);
   const end: Date = new Date(json.sunset.value);
   const observed: Date = new Date(json.observation_time.value);
